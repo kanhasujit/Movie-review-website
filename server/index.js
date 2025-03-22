@@ -124,10 +124,23 @@ app.use(cookieParser());
 app.use("/api/v1", routes);
 
 // Error Handling Middleware (Optional but recommended)
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({ error: "Internal Server Error" });
+// app.use((err, req, res, next) => {
+//     console.error(err.stack);
+//     res.status(500).json({ error: "Internal Server Error" });
+// });
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://movie-review-website-8ljk.vercel.app");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+
+  if (req.method === "OPTIONS") {
+      return res.sendStatus(200);  // Important for preflight requests
+  }
+
+  next();
 });
+
 
 // Server Setup
 const port = process.env.PORT || 5000;
