@@ -3,7 +3,7 @@ import queryString from "query-string";
 
 // const baseURL = "https://moonflix-api.vercel.app/api/v1/";
 // const baseURL = "http://127.0.0.1:5000/api/v1/";
-const baseURL = "https://movie-review-website-pied.vercel.app/api/v1/";
+const baseURL = "https://movie-review-website-8ljk.vercel.app/api/v1/";
 
 
 const publicClient = axios.create({
