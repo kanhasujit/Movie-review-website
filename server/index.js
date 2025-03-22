@@ -40,13 +40,25 @@ import routes from "./src/routes/index.js";
 const app = express();
 
 // CORS Configuration
+// app.use(
+//     cors({
+//         origin: ['https://movie-review-website-8ljk.vercel.app'], // Frontend URL
+//         methods: 'GET, POST, PUT, DELETE', // Allowed HTTP methods
+//         credentials: true // Allow cookies and authorization headers
+//     })
+// );
 app.use(
-    cors({
-        origin: ['https://movie-review-website-8ljk.vercel.app'], // Frontend URL
-        methods: 'GET, POST, PUT, DELETE', // Allowed HTTP methods
-        credentials: true // Allow cookies and authorization headers
-    })
+  cors({
+      origin: [
+          'https://movie-review-website-8ljk.vercel.app', 
+          'http://localhost:3000' // Optional for local testing
+      ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+      credentials: true
+  })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
