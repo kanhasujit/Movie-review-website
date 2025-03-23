@@ -1,14 +1,10 @@
-// import { Box } from "@mui/material";
-// import { Navigation, Pagination } from "swiper";
-// import { Swiper } from "swiper/react";
-
 import { Box } from "@mui/material";
-import { Navigation, Pagination } from "swiper/modules"; // Import Navigation and Pagination modules from 'swiper/modules'
-import { Swiper } from "swiper/react"; // Import Swiper and SwiperSlide from 'swiper/react'
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper } from "swiper/react";
 
-import 'swiper/css'; // Core Swiper styles
-import 'swiper/css/navigation'; // Navigation module styles
-import 'swiper/css/pagination'; // Pagination module styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 
 const NavigationSwiper = ({ children }) => {
