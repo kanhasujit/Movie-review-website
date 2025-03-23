@@ -80,7 +80,7 @@ mongoose.connect(process.env.MONGODB_URL).then(() => {
 // // app.use(
 // //     cors({
 // //         origin: [
-// //             'https://movie-review-website-8ljk.vercel.app', 
+// //             'https://movie-review-website-8ljk.vercel.app',
 // //             'http://localhost:3000' // Optional for local testing
 // //         ],
 // //         methods: ['GET', 'POST', 'PUT', 'DELETE'],
